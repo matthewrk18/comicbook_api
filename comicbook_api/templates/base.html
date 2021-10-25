@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="static/css/main.css">
+<title>Comic Book API</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #04080e;">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active px-2">
+                        <a class="nav-link" href="{{ url_for('site.home') }}" id="nav-links">Home</a>
+                    </li>
+                    
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" id="nav-links">Search</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="{{ url_for('site.home') }}" id="cabana">Comic Cabana</a>
+                <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ms-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{{ url_for('site.profile') }}" id="nav-links">Profile</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{{ url_for('auth.logout') }}" id="nav-links">Log Out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{{ url_for('auth.signin') }}" id="nav-links">Sign In</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{{ url_for('auth.signup') }}" id="nav-links">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    {% block content %}
+    {% endblock content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

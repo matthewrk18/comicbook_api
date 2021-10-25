@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+    <div class="container-fluid" id="sign_up_page">
+        
+        <div class="row">
+            
+            <div class="col-12 col-md-8 d-flex justify-content-center align-items-center" id="sign_up_photo">
+                <img class="img-fluid" width="70%" height="auto" src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/24748.png" alt="Spider-Man Silhouette">
+            </div>
+
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center" id="sign_up_form">
+                <div>
+                    <h1>Sign Up</h1>
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <fieldset id="user_name-field" id="form-group">
+                                {{ form.user_name.label }}
+                                {{ form.user_name(class = "form-control", placeholder = "Place User Name Here...") }}
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset id="email-field" id="form-group">
+                                {{ form.email.label }}
+                                {{ form.email(class = "form-control", placeholder = "Place Email Here...") }}
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset id="password-field" id="form-group">
+                                {{ form.password.label }}
+                                {{ form.password(class = "form-control", placeholder = "Place Password Here...") }}
+                            </fieldset>
+                        </div>
+                        
+                        {{ form.submit_button(class = "btn btn-dark") }}
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content%}

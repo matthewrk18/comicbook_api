@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid" id="profile">
+        <header class="hero-section">
+            <h3 class="header-text">Welcome to Comic Cabana!</h3>
+        </header>
+        <div class="container">
+            <h3>Here are your Profile details</h3>
+            <ul class="list-group">
+                <li class="list-group-item">User Name: {{ current_user.user_name }}</li>
+                <li class="list-group-item">Email: {{ current_user.email }}</li>
+                <li class="list-group-item">Token: {{ current_user.token }}</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock content %}

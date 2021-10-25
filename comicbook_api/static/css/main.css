@@ -1,0 +1,83 @@
+/*{
+    border: solid 1px red;
+}*/
+
+#cabana{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 6vh;
+    color: red;
+    text-shadow: -0.2rem -0.2rem 0.2rem white;
+}
+
+#sign_up_page{
+    background-image: linear-gradient(rgba(255,0,0,0.4), rgba(255,0,0,0.5), rgba(255,0,0,0.6), rgba(255,0,0,0.7),
+rgba(255,0,0,0.7), rgba(255, 0, 0, 0.6), rgba(255,0,0,0.5), rgba(255,0,0,0.4));
+    padding-top: 10vh;
+}
+
+#sign_up_form{
+    color: black;
+    text-align: center;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+#sign_up_form h1{
+    color: white;
+}
+
+.form-group{
+    padding: .8em 0em .8em 0em;
+}
+
+.form-control{
+    background-color: black;
+    border: solid 3px red;
+}
+
+.btn.btn-dark{
+    background-color: black;
+    color: red;
+    border-color: red;
+}
+
+#nav-links{
+    color: red;
+    font-size: 2.5vh;
+}
+
+/* profile page */
+
+#profile{
+    padding-top: 20vh;
+}
+
+
+/* index*/
+
+#focus{
+    padding-top: 6em;
+    padding-left: 3em;
+    text-align: center;
+}
+
+#focus h3{
+    font-size: 1.2em;
+    color: black;
+    padding-bottom: 1em;
+}
+
+#noembelish{
+    text-decoration: none;
+    color: red;
+}
+
+#marvelpic{
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+#doubletap{
+    padding-top: 1.3em;
+}
